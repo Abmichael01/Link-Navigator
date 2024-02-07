@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block title %}
+  Home
+{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% if page == "login" %}
+
+<section class="login-sign-up">
+    <form action="" method="POST">
+        <input type="text" name="username">
+        <input type="password" name="password">
+    </form>
+
+</section>
+
+{% else %}
+
+<section class="login-sign-up">
+    <form action="" method="POST">
+        <input type="email" name="email">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="submit">Login</button>
+        <p>Are you a new user? <a href="">Sign up</a></p>
+    </form>
+</section>
+
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+
+footer{
+    display: flex;
+    padding: 60px 200px;
+    /* height: 150px; */
+    background: #252424;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+footer h2{
+    font-size: 30px;
+    color: #fff;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer div a{
+    color: #fff;
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+footer div h3{
+    color: #761ccf;
+    font-size: 25px;
+}
