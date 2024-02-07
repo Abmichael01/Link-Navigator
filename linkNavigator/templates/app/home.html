@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Link Navigator</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    {% include "nav.html" %}
+
+    <section class="hero">
+
+        <div class="hero-illus">
+            <img src="{% static 'images/3d-illus1.png' %}" alt="" class="illustration">
+            <div class="link-img-cont">
+                <img src="{% static 'images/3d-link.png' %}" alt="" class="illustration link-img">
+                <div class="shadow"></div>
+            </div>
+        </div>
+
+        <div class="hero-info">
+            <h1><span>EASILY</span> organize your links in one space</h1>
+            <button><span>Get Started</span></button>
+        </div>
+    </section>
+
+    <section class="get-started">
+        <h2>How To Start</h2>
+        <div class="steps">
+            <div class="step">
+                <p class="number">1</p>
+                <p>Create a free account with your email address and verify the account</p>
+            </div>
+    
+            <div class="step">
+                <p class="number">2</p>
+                <p>Start adding links to you dashboard. Tags can be added to links for easy organization</p>
+            </div>
+    
+            <div class="step">
+                <p class="number">3</p>
+                <p>Get a free links profile page to share</p>
+            </div>
+        </div>
+        <button class="start"><span>Start Now</span></button>
+    </section>
+
+    <footer>
+        <h2>Link Navigator</h2>
+        <div>
+            <h3>Us</h3>
+            <a href="">About Us</a>
+            <a href="">Terms and Policies</a>
+            <a href="">Contact Us</a>
+            <a href="">Tell us how to make the websiite better for you</a>
+        </div>
+
+        <div>
+            <h3>Accounts</h3>
+            <a href="">Sign up</a>
+            <a href="">Login</a>
+
+        </div>
+    </footer>
+</body>
+</html>
