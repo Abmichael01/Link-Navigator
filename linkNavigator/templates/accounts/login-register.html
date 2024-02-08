@@ -9,27 +9,36 @@
 {% endblock title %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/login-register.css' %}">
+
 
 {% if page == "login" %}
 
-<section class="login-sign-up">
+<section class="login-sign-up {% if page == 'sign-up' %}
+  sign
+{% endif %}">
     <form action="" method="POST">
-        <input type="text" name="username">
-        <input type="password" name="password">
+        <h2>Welcome Back</h2>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password1" placeholder="Password">
+        <button type="submit">Login</button>
+        <p>Are you a new user? <a href="{% url 'sign-up' %}">Sign up</a></p>
     </form>
 
 </section>
 
+
 {% else %}
 
-<section class="login-sign-up">
+<section class="login-sign-up sign">
     <form action="" method="POST">
-        <input type="email" name="email">
-        <input type="text" name="username">
-        <input type="password" name="password">
-        <button type="submit">Login</button>
-        <p>Are you a new user? <a href="">Sign up</a></p>
+        <h2>Sign Up</h2>
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password2" placeholder=" Confirm Password">
+        <button type="submit">Sign up</button>
+        <p>Are you an existing user? <a href="{% url 'login' %}">Login</a></p>
     </form>
 </section>
 

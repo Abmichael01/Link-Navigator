@@ -117,7 +117,7 @@
 }
 
 .hero-info button span{
-    z-index: 99999;
+    z-index: 99;
     position: relative;
 }
 

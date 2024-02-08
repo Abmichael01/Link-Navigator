@@ -1,0 +1,58 @@
+.login-sign-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    /* background-image: url(../images/login-bg.webp);
+    background-size: cover;
+    background-position: center; */
+}
+
+.sign{
+    padding: 100px 0px;
+}
+
+.login-sign-up form{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 35%;
+    align-items: center;
+    /* background: linear-gradient(#a56fdb, #d2ccd8); */
+    background: #e9e6ec;
+
+}
+
+.login-sign-up form h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.login-sign-up form input{
+    padding: 10px 20px;
+    margin: 20px 0px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: #fff;
+    outline-color: #761ccf;
+}
+
+.login-sign-up form button{
+    padding: 10px 35px;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: #761ccf;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-sign-up form p{
+    font-size: 20px;
+    margin-top: 20px;
+}
