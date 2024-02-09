@@ -1,0 +1,95 @@
+.edit-profile{
+    margin-top: 30px;
+    padding: 0px 40px;
+}
+
+.profile-info{
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.profile-info form{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.profile-info h2{
+    color: #761ccf;
+}
+
+.inputs-cont{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 100%
+}
+
+.profile-info form input{
+    padding: 8px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #5c5c5c;
+    outline-color: #761ccf;
+    /* width: 100%; */
+}
+
+.profile-info form textarea{
+    padding: 8px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #5c5c5c;
+    height: 60px;
+    outline-color: #761ccf;
+    /* width: 100%; */
+}
+
+.profile-info form .pic-cont{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.profile-info form .pic{
+    width: 150px;
+    height: 150px;
+    
+    clip-path: circle();
+    cursor: pointer;
+    /* object-fit: contain; */
+    
+    
+}
+
+.profile-info form .pic-cont:hover::after{
+    display: flex;
+}
+
+.profile-info form .pic-cont::after{
+    content: "Change Image";
+    /* clip-path: circle(); */
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+    display: none;
+    transition: 1s ease;
+}

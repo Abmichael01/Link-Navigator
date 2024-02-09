@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+      
+    {% endblock title %} | Link Navigator</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashbase.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    
+    <section class="sidebar">
+        <div class="up-nav">
+            <div class="user-info">
+                <img src="" alt="" class="user-img">
+                <h3>@username</h3>
+            </div>
+    
+            <a href="{% url 'dashboard' %}">
+                <div class="nav-cont dash-nav" >
+                    <img src="{% static 'images/icons/dash.svg' %}" alt="" class="nav-icon">
+                    <p  class="nav active-nav-text">Dashboard</p>
+                </div>
+            </a>
+
+            <a href="{% url 'edit-profile' %}">
+                <div class="nav-cont edit-nav">
+                    <img src="{% static 'images/icons/edit.svg' %}" alt="" class="nav-icon">
+                    <p  class="nav">Edit profile</p>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="nav-cont preview-nav">
+                    <img src="{% static 'images/icons/view.svg' %}" alt="" class="nav-icon">
+                    <p  class="nav">Preview Profile</p>
+                </div>
+            </a>
+            
+            
+        </div>
+
+        <a href="">
+            <div class="nav-cont">
+                <img src="{% static 'images/icons/logout.svg' %}" alt="" class="nav-icon">
+                <p  class="nav">Logout</p>
+            </div>
+        </a>
+        
+    </section>
+
+    <section class="main">
+        <nav>
+            <img src="{% static 'images/icons/menu.svg' %}" alt="" class="icon">
+            <h2>Link Navigator</h2>
+        </nav>
+        <p class="page" style="display: none;">{{page}}</p>
+
+        {% block content %}
+          
+        {% endblock content %}
+        
+    </section>
+
+    
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

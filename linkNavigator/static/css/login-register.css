@@ -22,7 +22,8 @@
     width: 35%;
     align-items: center;
     /* background: linear-gradient(#a56fdb, #d2ccd8); */
-    background: #e9e6ec;
+    background: #fff;
+    border: 1px solid #761ccf;
 
 }
 
@@ -38,8 +39,9 @@
     border-radius: 10px;
     border: none;
     font-size: 20px;
-    background-color: #fff;
+    /* background-color: #e9e6ec; */
     outline-color: #761ccf;
+    border: 1px solid #b9b9b9;
 }
 
 .login-sign-up form button{

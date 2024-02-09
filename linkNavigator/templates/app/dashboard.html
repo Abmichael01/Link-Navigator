@@ -1,0 +1,132 @@
+{% extends "dashbase.html" %}
+
+{% load static %}
+
+{% block title %}
+      Dashboard
+{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+<div class="actions">
+    <a class="add-link-butt">
+        <div class="action add-link-butt">
+            <img src="{% static 'images/icons/add.svg' %}" alt="" class="icon">
+            <p  class="nav">Add New Link</p>
+        </div>
+    </a>
+
+    <a href="">
+        <div class="action">
+            <img src="{% static 'images/icons/link.svg' %}" alt="" class="icon">
+            <p  class="nav">Manage Links</p>
+        </div>
+    </a>
+
+    <a href="">
+        <div class="action">
+            <img src="{% static 'images/icons/edit.svg' %}" alt="" class="icon">
+            <p  class="nav">Edit profile</p>
+        </div>
+    </a>
+
+    <a href="">
+        <div class="action">
+            <img src="{% static 'images/icons/view.svg' %}" alt="" class="icon">
+            <p  class="nav">Preview profile</p>
+        </div>
+    </a>
+</div>
+
+
+
+<div class="my-links-cont">
+    <div class="my-links">
+        <div class="links-info">
+            <h2>My Links</h2>
+            <p><strong>Total Links: </strong> 5</p>
+        </div>
+    
+        <div class="links">
+            <a href="" class="link">Youtube Channel</a>
+            <a href="" class="link">Facebook Page</a>
+            <a href="" class="link">Instagram Profile</a>
+            <a href="" class="link">Linkedin Profile</a>
+        </div>
+
+        <button class="view-all">View All <span><img src="{% static 'images/icons/arrow.svg' %}" alt=""></span></button>
+    </div>
+</div>
+
+<div class="my-links-cont">
+    <div class="my-links">
+        <div class="links-info">
+            <h2>Clicks</h2>
+            <p><strong>Total Clicks: </strong> 5</p>
+        </div>
+    
+        <div class="clicks">
+            <div class="click-cont">
+                <a href="" class="link">Youtube Channel</a>
+                <p>5 Clicks</p>
+            </div>
+            <div class="click-cont">
+                <a href="" class="link">Facebook Page</a>
+                <p>5 Clicks</p>
+            </div>
+            
+        </div>
+
+        <button class="view-all">View All <span><img src="{% static 'images/icons/arrow.svg' %}" alt=""></span></button>
+    </div>
+</div>
+
+<section class="add-link-sec">
+    <div class="overlay"></div>
+    <div class="add-link">
+        <form action="">
+            <h2>Add a new link</h2>
+            <input type="text" placeholder="Link name" class="text-input">
+            <input type="text" placeholder="Paste link here" class="text-input">
+            <div class="color-input-cont" for="color">
+                <label for="color">Choose background color</label>
+                <input type="color" id="color" placeholder="Choose a background color" class="color-input">
+            </div>
+            
+            <div class="buttons">
+                <button class="cancel">Cancel</button>
+                <button type="submit">Add link</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    const addLinkSec = document.querySelector(".add-link-sec")
+    const addLink = document.querySelector(".add-link")
+    const overlay = document.querySelector(".overlay")
+    const addLinkButt = document.querySelector(".add-link-butt")
+    const cancel = document.querySelector(".cancel")
+
+
+    addLinkButt.addEventListener("click", ()=>{
+        overlay.style.display = "block"
+        addLinkSec.style.display = "flex"
+        addLink.classList.add("add-link-active")
+    })
+
+    overlay.addEventListener("click", ()=>{
+        overlay.style.display = "none"
+        addLinkSec.style.display = "none"
+        addLink.classList.remove("add-link-active")
+    })
+
+    cancel.addEventListener("click", (e)=>{
+        e.preventDefault()
+        overlay.style.display = "none"
+        addLinkSec.style.display = "none"
+        addLink.classList.remove("add-link-active")
+    })
+</script>
+{% endblock content %}

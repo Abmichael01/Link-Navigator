@@ -1,7 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/nav.css' %}">
 <header>
-    <h2>Link Navigator</h2>
+    <a href="{% url 'home' %}"><h2>Link Navigator</h2></a>
     <nav>
         <a href="{% url 'login' %}" class="login">Login</a>
         <a href="{% url 'sign-up' %}" class="sign-up">Sign up for free</a>

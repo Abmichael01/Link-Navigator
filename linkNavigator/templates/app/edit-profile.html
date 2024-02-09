@@ -1,0 +1,50 @@
+{% extends "dashbase.html" %}
+
+{% load static %}
+
+{% block title %}
+      Edit Profile
+{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/edit-profile.css' %}">
+
+<div class="edit-profile">
+    <div class="profile-info">
+        <h2>Edit Profile Info</h2>
+        <form action="">
+            <label for="pic-input" class="pic-cont">
+                <img src="{% static 'images/login-bg.webp' %}" alt="" class="pic">
+                <input type="file" id="pic-input" style="display: none;">
+            </label>
+
+            <div class="inputs-cont">
+                <input type="text" value="Mr Black">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Profile Description"></textarea>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const pic = document.querySelector(".pic")
+    const picInput = document.querySelector("#pic-input")
+
+    const imgUrl = picInput.dir
+
+    picInput.addEventListener("input", ()=>{
+        if (picInput.files && picInput.files[0]){
+
+            var reader = new FileReader()
+
+            reader.onload =  function (e) {
+                var imgUrl = e.target.result
+
+                pic.src = imgUrl
+            }
+            reader.readAsDataURL(picInput.files[0])
+        }
+    })
+</script>
+
+{% endblock content %}
